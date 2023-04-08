@@ -549,7 +549,7 @@ impl KbdHandler {
             let (key_without_modifiers, _) = ker.key_without_modifiers();
             let text_with_all_modifiers = ker.text_with_all_modifiers();
 
-            let repeats = unsafe { state.key_repeats(key) };
+            let repeats = unsafe { state.key_repeats(key + 8) };
 
             (
                 physical_key,
